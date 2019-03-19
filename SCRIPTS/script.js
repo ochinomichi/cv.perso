@@ -56,3 +56,12 @@ function cursorChange(){
 		document.body.style.cursor = "default";
 	}
 }
+
+function dateDiff(d1, d2)
+{
+	return new Number((d2.getTime() - d1.getTime()) / 31536000000).toFixed(0);
+}
+
+/*var today = new Date();
+var olday = new Date("1 January 2000");
+document.write(dateDiff(olday, today));*/
