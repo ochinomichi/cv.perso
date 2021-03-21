@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>CV - Thomas Inganni-Vigui&eacute;</title>
+	<title>CV - Thomas Inganni</title>
 	<link rel="stylesheet" href="cv.css" />
 	<script type="text/javascript" src="./SCRIPTS/script.js"></script>
 </head>
@@ -8,8 +8,8 @@
 <section class="myCV">
 	<section class="myHeader">
 		<img src="./IMG/portrait.JPG" class="portrait">
-		<span class="myName">Thomas Inganni-Vigui&eacute;</span><br />
-		N&eacute; le 23 d&eacute;cembre 1983<br />
+		<span class="myName">Thomas Inganni</span><br />
+		N&eacute; le 23 d&eacute;cembre 1983 (<span id="AGE">37</span> ans)<br />
 		R&eacute;sidant &agrave; Montpellier<br />
 		T&eacute;l&eacute;phone : sur demande<br />
 		<img src="./IMG/logo_skype.png"> : thomas.inganni<br />
@@ -22,6 +22,19 @@
 		<div class="titre">Testeur, Concepteur, D&eacute;veloppeur</div>
 		<div class="qualite" id="ANNEES-EXP">7 ann&eacute;es d'exp&eacute;rience dans la Qualit&eacute; Logicielle</div>
 	</section>
+	<section>
+		<span>Comp&eacute;tences</span>
+		<span>
+			<ul>
+				<li>Test Logiciel : Robot Framework (Installation, Param&eacute;trage, Mise en place d'une infrastructure adapt&eacute;e au logiciel sous test), HP Quality Center (9 et 10), HP Quick Test Professional 10, SQUASH TM, Katalon Studio, JIRA</li>
+				<li>Programmer en : Python, C/C++, Java SE, HTML/CSS, JavaScript, PHP</li>
+				<li>G&eacute;rer des bases de donn&eacute;es : MySQL, SQL Server</li>
+				<li>Gestionnaire de sources : Git, GitHub</li>
+				<li>Mettre en place des gestionnaires de contenus : SPIP, Drupal, WordPress</li>
+				<li>Installer, Utiliser, G&eacute;rer des syst&egrave;mes d'exploitation : Windows (jusqu'&agrave; la version 10), Mac OS 10.9, Linux Ubuntu</li>
+			</ul>
+		</span>
+	</section>
 	<table>
 		<tr>
 			<td class="sectionName">
@@ -29,11 +42,11 @@
 			</td>
 			<td class="sectionContent">
 				<ul>
-					<li>Programmer en : C/C++, Java SE, HTML/CSS, JavaScript, PHP, Python</li>
+					<li>Test Logiciel : Robot Framework (Installation, Param&eacute;trage, Mise en place d'une infrastructure adapt&eacute;e au logiciel sous test), HP Quality Center (9 et 10), HP Quick Test Professional 10, SQUASH TM, Katalon Studio, JIRA</li>
+					<li>Programmer en : Python, C/C++, Java SE, HTML/CSS, JavaScript, PHP</li>
 					<li>G&eacute;rer des bases de donn&eacute;es : MySQL, SQL Server</li>
 					<li>Gestionnaire de sources : Git, GitHub</li>
 					<li>Mettre en place des gestionnaires de contenus : SPIP, Drupal, WordPress</li>
-					<li>Test Logiciel : HP Quality Center (9 et 10), HP Quick Test Professional 10, SQUASH TM, Katalon Studio, JIRA</li>
 					<li>Installer, Utiliser, G&eacute;rer des syst&egrave;mes d'exploitation : Windows (jusqu'&agrave; la version 10), Mac OS 10.9, Linux Ubuntu</li>
 				</ul>
 			</td>
@@ -153,6 +166,22 @@
 				Formations
 			</td>
 			<td class="sectionContent">
+				<div class="title">Testeur Certifi&Eacute; Niveau Fondation (ISTQB - CFTL)</div>
+				<div class="complement">Certification délivrée en Décembre 2019</div>
+				Certification consultable sur <a>gasq.org</a> en complétant le formulaire avec :<br />
+				- Last Name : Inganni<br />
+				- Number of Certificate : 71840<br />
+				<i onclick="objectivesDisplay('lst9');" onmouseover="cursorChange();" onmouseout="cursorChange();">&gt;&gt;R&eacute;alisations</i>
+				<div id="lst9" style="display : none;">
+					<ul>
+						<li>Notion fondamentales</li>
+						<li>Tester tout au long du cycle de vie logiciel</li>
+						<li>Techniques statiques</li>
+						<li>Techniques de conception des tests</li>
+						<li>Gestion des tests</li>
+						<li>Outils de test</li>
+					</ul>
+				</div>
 				<div class="title">Certification d'initiation &agrave; la programmation orient&eacute;e objet en C++</div>
 				<div class="complement">Coursera, &Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne, D&eacute;cembre 2013</div>
 				Initiation &agrave; au d&eacute;veloppement objet en C++.<br />
@@ -220,7 +249,9 @@
 <script type="text/JavaScript">
 	var today = new Date();
 	var olday = new Date("1 January 2007");
+	var birthday = new Date("23 December 1983");
 	document.getElementById("ANNEES-EXP").innerHTML = dateDiff(olday, today) + " ann&eacute;es d'exp&eacute;rience dans la Qualit&eacute; Logicielle";
+	document.getElementById("AGE").innerHTML = dateDiff(birthday, today);
 </script>
 </body>
 </html>
